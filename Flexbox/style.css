@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    background-color: antiquewhite;
+}
+h1{
+    padding: 0.5%;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#f1{
+    align-content: flex-end;
+    flex-flow: column wrap;
+    padding: 5%;
+    
+}
+#f2{
+    margin-right: 5%;
+}
+#f3{
+    flex-flow: column wrap;
+    align-items: center;
+    border: black groove 2px;
+}
+#f4{
+    flex-flow: row nowrap;
+    text-align: center;
+    padding: 5%;
+}
+.container-md-col-index{}
+.container-md-col-1{}
+.container-md-col-2{}
+.container-md-col-3{}
+.container-md-col-4{}
+.container-md-col-5{}
+.container-md-col-6{}

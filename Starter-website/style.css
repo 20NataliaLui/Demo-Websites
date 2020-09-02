@@ -1,0 +1,186 @@
+@charset "utf-8";
+body {
+	background-image: radial-gradient(circle, #633e5a, #cb95aa, #658cc8);
+}
+
+table {
+	width: 50%;
+	border: 2px black double;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a:hover{
+	background-color:yellow;
+}
+
+.vid{
+	position:absolute;
+	padding-left: 25%;
+	padding-top: 28px;
+}
+
+.td1 {
+	padding-bottom: 15px;
+	border: 2px black double;
+	font-size: 24px;
+	text-align: center;
+}
+
+.title {
+	font-style: italic;
+	font-family: 'Calligraffitti', cursive;
+	text-align: center;
+}
+
+#gameBox{
+	width: 98%;
+	position: absolute;
+	height: 250px;
+	
+}
+
+.game{
+	position: relative;
+	top:0;
+}
+
+#myImage{
+	width: 100%;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: block;
+text-align:center;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  border: 4px gold groove;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+#frontBox{
+	width: 200px;
+	text-align: center;
+	padding-top: 90px;
+	padding-bottom: 90px;
+	background-color: aqua;
+}
+.greeting{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	perspective: 700px;
+	
+	float: left;
+	margin: 150px;
+}
+.greeting:hover .front{
+	transform: rotateZ(-80deg);
+}
+.greeting:hover .back{
+	transform: rotateZ(20deg);
+	transform: translateX(120px);
+}
+.greeting:hover .shout{
+	transform: rotateZ(20deg);
+	transform: translateY(180px);
+}
+.greeting:hover .face{
+	transition: all 0.4s ease-out;
+}
+.face{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: visible;
+	transition: all 0.7s ease-out;
+	transform-origin: 0.0;
+}
+.front{
+	transform: rotateY(0deg);
+	z-index: 2;
+}
+.back{
+	background: #9dcc78;
+	transform: rotateY(0deg);
+	z-index: 1;
+	padding-top: 18px;
+	text-align: center;
+	border-radius: 10px;
+}
+.shout{
+	background-color: limegreen;
+	transform: rotateY(0deg);
+	z-index: 1;
+	padding-top: 18px;
+	text-align: center;
+	border-radius: 10px;
+}

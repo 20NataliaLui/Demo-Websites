@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hobby</title>
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+
+<body>
+<table>
+	<td class="td1"><a href="index.html">Home</a></td>
+	<td class="td1"><a href="hobby.html">Hobby</a></td>
+    <td class="td1"><a href="hope.html">Hope</a></td>
+    <!-- Hopes and Dreams begins to play -->
+</table>
+<hr>
+<h4 class="title">Some of my interests include...</h4>
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+      <img src="jazz_bass.jpg" style="width:15%">
+  </div>
+
+  <div class="mySlides">
+      <img src="colombia.jpg" style="width:15%">
+  </div>
+
+  <div class="mySlides">
+      <img src="listen.jpg" style="width:25%">
+  </div>
+
+  <div class="mySlides">
+      <img src="frontend.png" style="width:25%">
+  </div>
+
+  <div class="mySlides">
+      <img src="mordor.jpg" style="width:35%">
+  </div>
+
+  <div class="mySlides">
+      <img src="pokemon.jpg" style="width:35%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="jazz_bass.jpg" style="width:100%" onclick="currentSlide(1)" alt="...Jazz Performances (I play the Bass)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="colombia.jpg" style="width:100%" onclick="currentSlide(2)" alt="...Eating Columbian Cuisune like Paella">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="listen.jpg" style="width:100%" onclick="currentSlide(3)" alt="...I am very happy when I listen to music. My favorite color is purple!">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="frontend.png" style="width:100%" onclick="currentSlide(4)" alt="...Front-End Design and Back-End Development">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mordor.jpg" style="width:100%" onclick="currentSlide(5)" alt="...Playing Video Games on my PC and PS4">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="pokemon.jpg" style="width:100%" onclick="currentSlide(6)" alt="...Pokemon">
+    </div>
+  </div>
+</div>
+
+<p>I have tried multiple times to pick up baking or cooking or knitting or sports as hobbies; but they always seem to fall flat. Quite literally, I tried to bake a cake and forgot the baking soda. At least it tasted like a cake in the end! If I could bring only three things with me to heaven or hell, I would bring my pc, my bass, and my headphones. That is all I need to survive. What do you need to survive?
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}// JavaScript Document
+</script>
+<iframe class="vid" width="50%" src="https://www.youtube.com/embed/tz82xbLvK_k?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
